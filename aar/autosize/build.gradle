@@ -1,0 +1,19 @@
+apply plugin: 'maven'
+
+uploadArchives{
+    repositories.mavenDeployer{
+        // 本地仓库路径
+        repository(url:"file://D://maven/local/repository/")
+        pom.project {
+            // 唯一标识
+            groupId 'com.itant.aar'
+            // 项目名称
+            artifactId 'autosize'
+            // 版本号
+            version '1.2.1'
+        }
+    }
+}
+
+configurations.maybeCreate("default")
+artifacts.add("default", file('autosize-1.2.1.aar'))
