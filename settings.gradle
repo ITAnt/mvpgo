@@ -1,14 +1,14 @@
 rootProject.name = "MvpGo"
 include ':mvp'
 include ':app'
-include ':aar:pickview'
-include ':aar:wheelview'
-include ':aar:autosize'
+//include ':aar:pickview'
+//include ':aar:wheelview'
+//include ':aar:autosize'
 //include ':aar:adapter'
-include ':aar:retry'
-include ':aar:immerse'
-include ':aar:codex'
-include ':aar:permission'
+//include ':aar:retry'
+//include ':aar:immerse'
+//include ':aar:codex'
+//include ':aar:permission'
 
 //定义
 //gradle.ext.compileSdk = 29
