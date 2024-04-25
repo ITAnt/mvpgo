@@ -12,6 +12,7 @@ import com.miekir.mvp.common.tools.SizeTools
 import com.miekir.mvp.common.tools.ToastTools
 import com.miekir.mvp.presenter.BasePresenter
 import com.miekir.mvp.view.base.IView
+import kotlin.math.absoluteValue
 
 /**
  * 防止快速点击
@@ -20,7 +21,7 @@ fun View.setSingleClick(limit: Long = 1000L, clickAction: (view: View) -> Unit) 
     var lastTime = 0L
     this.setOnClickListener {
         val tmpTime = System.currentTimeMillis()
-        if (tmpTime - lastTime > limit) {
+        if ((tmpTime - lastTime).absoluteValue > limit) {
             lastTime = tmpTime
             clickAction.invoke(this)
         }
